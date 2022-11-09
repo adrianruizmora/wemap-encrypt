@@ -5,7 +5,7 @@
   <h3 align="center">Wemap-encrypt</h3>
 
   <p align="center">
-    Repo for sharing sensitive data
+    Repo for sharing sensitive data MACOS ONLY
     <br />
   </p>
 </div>
