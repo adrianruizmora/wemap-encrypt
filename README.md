@@ -35,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The goal of this project is to be able to share sensitve data between wemap team members easily and free. This is an alternative to other tools like git-encrypt, gpg keys and AWS services large files.
+The goal of this project is to be able to share sensitve data between wemap team members easily and free. This is an alternative to other tools like git-encrypt, gpg keys and AWS services to encrypt large files.
 
 
 <!-- GETTING STARTED -->
