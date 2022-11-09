@@ -1,0 +1,18 @@
+alias randpass="openssl rand -base64 32"
+
+function wemap-encrypt {
+        src_folder="$1"
+        encrypt_folder_name="$(echo "$src_folder" | sed 's/.*\///')-encrypted.dmg"
+        teammate="$2"
+        password="$(randpass)"
+        echo -n $password | hdiutil create -encryption -stdinpass -srcfolder "$src_folder" "$encrypt_folder_name"
+        echo -n $password > password.txt
+        openssl rsautl -encrypt -inkey keys/$teammate.public.pem -pubin -in password.txt -out password.enc
+}
+
+function wemap-decrypt {
+        path_to_private_key="$1"
+        encrypted_folder_name="$2"
+        openssl rsautl -decrypt -inkey "$path_to_private_key" -in password.enc > password.txt
+        cat password.txt | hdiutil attach -stdinpass -autoopen "$encrypted_folder_name"
+}
