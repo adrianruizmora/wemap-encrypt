@@ -53,7 +53,9 @@ The goal of this project is to be able to share sensitve data between wemap team
 	   ```
 	   
 2. If you don't have already a pem key pair run the following commands:
-**/!\ you will be asked to enter a passphrase**
+
+    **/!\ you will be asked to enter a passphrase**
+
 	```sh
 	cd ~/.ssh
 	openssl genrsa -aes128 -out your_name.private.pem 1024
