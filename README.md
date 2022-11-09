@@ -122,5 +122,6 @@ If you want to send data with this method to a teammate, he/she must have alread
 	cd ~/<PATH_TO_WEMAP_ENCRYPT>/sample-scripts_encrypted
 	
 	# First argument: file to decrypt in current directory
-	wemap-decrypt sample-scripts-encrypted.dmg 
+    # Second argument: path to private pem key
+	wemap-decrypt sample-scripts-encrypted.dmg ~/.ssh/your_name.private.pem
 	```
